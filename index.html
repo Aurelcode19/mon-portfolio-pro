@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Aurel Buranga,développeur web freelance spécialisé en front-end"
+    />
+    <title>AurelCode - Developpeur Web Freelance | Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- En-tete avec navigation -->
+    <header class="header">
+      <div class="container">
+        <a href="#home" class="logo" aria-label="Retour à l'accueil"
+          >Aurel<span>Code</span>
+        </a>
+
+        <!-- Navigation principale -->
+        <nav class="nav" aria-label="Navigation principale">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">projets</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">A propos</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Bouton contact desktop -->
+        <div class="header__cta">
+          <a href="mailto:aurelburanga88@gmail.com" class="btn btn--primary"
+            >Contactez-moi
+          </a>
+        </div>
+
+        <!-- Menu burger mobile  -->
+        <button
+          class="menu-toggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- section hero -->
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero__content">
+            <h1 id="hero-title" class="hero__title">
+              Bonjour, je suis <span class="accent">Aurel Buranga.</span>
+            </h1>
+
+            <div class="hero__presentation">
+              <div class="hero__image">
+                <img
+                  src="./assets/imgs/myprofil.jpg"
+                  alt=" Photo de Aurel Buranga, développeur web freelance"
+                  width="300"
+                  height="300"
+                />
+                <p class="hero__caption">
+                  Freelance en <span class="accent">développement web</span>
+                </p>
+              </div>
+
+              <div class="hero__text">
+                <p>
+                  Moi c'est <strong>Aurel Buranga</strong>, je fais le
+                  <span class="accent">design</span> et le
+                  <span class="accent">développement </span>des sites web.
+                  Spécialisé dans le front-end, je crée des sites web modernes
+                  et attractifs qui s'adaptent parfaitement à tous les écrans
+                </p>
+                <!-- Bouton contact mobile  -->
+                <div class="hero__cta-mobile">
+                  <a
+                    href="mailto:aurelburanga24@gmail.com"
+                    class="btn btn--primary"
+                    >Contactez-moi</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  Section compétences  -->
+      <section class="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 id="skills-title" class="section__title">Mes compétences</h2>
+          <p class="section__subtitle">
+            Passionné par l'informatique , J'ai développé des compétences
+            solides sur les technologies web modernes.
+          </p>
+
+          <div class="skills__grid">
+            <article class="skill-card">
+              <div class="skill-card__icon">
+                <img
+                  src="/assets/imgs/html-icon.png"
+                  alt="Icône HTMl 5 "
+                  width="80"
+                  height="80"
+                />
+              </div>
+              <div class="skill-card__header">
+                <h3 class="skill-card__title">HTML5</h3>
+                <p class="skill-card__level">Niveau: <strong>Avancé</strong></p>
+              </div>
+              <p class="skill-card__description">
+                Le HTML est le langage fondamental du web. Je maîtrise la
+                sémantique HTML5 pour créer des structures robustes et
+                accessibles.
+              </p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card__icon">
+                <img
+                  src="/assets/imgs/css-icon.png"
+                  alt="Icône CSS3"
+                  width="80"
+                  height="80"
+                />
+              </div>
+              <div class="skill-card__header">
+                <h3 class="skill-card__title">CSS3</h3>
+                <p class="skill-card__level">Niveau: <strong>Avancé</strong></p>
+              </div>
+              <p class="skill-card__description">
+                J' utilise CSS3 pour créer des interfaces modernes, responsive
+                et esthétiques avec Flexbox, Grid et les animations CSS.
+              </p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card__icon">
+                <img
+                  src="./assets/imgs/javascript.png"
+                  alt="Icône JavaScript"
+                  width="80"
+                  height="80"
+                />
+              </div>
+              <div class="skill-card__header">
+                <h3 class="skill-card__title">JavaScript</h3>
+                <p class="skill-card__level">
+                  Niveau: <strong>Intermédiaire</strong>
+                </p>
+              </div>
+              <p class="skill-card__description">
+                JavaScript permet d'ajouter de l'interactivité et de créer des
+                expériences utilisateur dynamique et engageantes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section projets  -->
+      <section id="projects" class="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <h2 id="projects-title" class="section__title">Mes projets</h2>
+
+          <div class="projects__grid">
+            <article class="project-card">
+              <div class="project-card__image">
+                <img
+                  src="./assets/imgs/projet/site e-commerce.png"
+                  alt="site e-commerce - grille de produits"
+                  width="400"
+                  height="250"
+                />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Site e-commerce</h3>
+                <p class="project-card__tech">
+                  <strong>Technologies :</strong> HTML5 & CSS3
+                </p>
+                <p class="project-card__description">
+                  Grille de produits responsive pour un site e-commerce moderne.
+                </p>
+                <a href="#" class="btn btn--secondary">Voir le projet</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__image">
+                <img
+                  src="./assets/imgs/projet/site vitrine .png"
+                  alt="Site Vitrine pour pâtisserie"
+                  width="400"
+                  height="250"
+                />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Site Vitrine - Pâtisserie</h3>
+                <p class="project-card__tech">
+                  <strong>Technologies :</strong> HTML5 , CSS3, Figma
+                </p>
+                <p class="project-card__description">
+                  Site vitrine élégant pour une pâtisserie avec design sur
+                  Figma.
+                </p>
+                <a href="#" class="btn btn--secondary">Voir le projet</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card__image">
+                <img
+                  src="./assets/imgs/projet/grille produits.png"
+                  alt="Grille de produits responsive"
+                  width="400"
+                  height="250"
+                />
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Grille de produits</h3>
+                <p class="project-card__tech">
+                  <strong>Technologies :</strong> HTML5 & CSS3
+                </p>
+                <p class="project-card__description">
+                  Grille de produits responsive avec système de filtres.
+                </p>
+                <a href="#" class="btn btn--secondary"> Voir le projet</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects__more">
+            <button class="btn btn--outline">Voir plus de projets</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section services  -->
+      <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+          <h2 id="services-title" class="section__title">Mes Services</h2>
+          <p class="section__subtitle">
+            Je proposes des solutions web sur mesure pour répondre à vos besoins
+            avec un code propre et maintenable.
+          </p>
+          <div class="services__grid">
+            <article class="service-card">
+              <h3 class="service-card__title">Intégration de maquettes</h3>
+              <p class="service-card__description">
+                Donnez vie à vos maquettes : je les transforme en sites web
+                responsives, accessibles et optimisés pour le SEO.
+              </p>
+              <a href="#contact" class="btn btn--primary"
+                >Discutons de votre projet</a
+              >
+            </article>
+
+            <article class="service-card">
+              <h3 class="service-card__title">Sites vitrines</h3>
+              <p class="service-card__description">
+                Je conçois et développe votre site vitrine sur mesure pour
+                présenter vos services et renforcer votre crédibilité en ligne.
+              </p>
+              <a href="#contact" class="btn btn--primary"
+                >Discutons de votre projet</a
+              >
+            </article>
+
+            <article class="service-card">
+              <h3 class="service-card__title">Sites responsives</h3>
+              <p class="service-card__description">
+                J'optimise l'affichage de votre site pour qu'il soit parfait sur
+                tous les écrans : mobile, tablette et desktop.
+              </p>
+              <a href="#contact" class="btn btn--primary"
+                >Discutons de votre projet</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section contact  -->
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title" class="section__title">Contact</h2>
+          <p class="section__subtitle">
+            Vous avez un projet ? Discutons-en ensemble pour le concrétiser.
+          </p>
+
+          <div class="contact__methods">
+            <a href="mailto:aurelburanga88@gmail.com" class="contact__link">
+              <span class="contact__icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                  />
+                </svg>
+              </span>
+              aurelburanga88@gmail.com
+            </a>
+            <a href="#" class="contact__link">
+              <span class="contact__icon"> </span>
+              LinkedIn
+            </a>
+          </div>
+
+          <form class="contact-form" aria-labelledby="contact-form-title">
+            <h3 id="contact-form-title" class="contact-form__title">
+              Envoyez-moi un message
+            </h3>
+
+            <div class="form-group">
+              <label for="name" class="form-label">Votre nom</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Votre email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Votre message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                class="form-textarea"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn-full">
+              Envoyer le message
+            </button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pied de page  -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy;2024 AurelCode. Tous droits réservés.</p>
+        <p class="footer__credit">Développé par Aurel Buranga</p>
+      </div>
+    </footer>
+
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>
