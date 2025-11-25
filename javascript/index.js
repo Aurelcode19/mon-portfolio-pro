@@ -1,94 +1,47 @@
-// Script . js - Interactivité basique
-document.addEventListener("DOMContentLoaded", function () {
-  // Menu mobile
+document.addEventListener("DOMContentLoaded", () => {
+  /* 1. GESTION DU MENU MOBILE */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
+  const navLinks = document.querySelectorAll(".nav__link");
 
   if (menuToggle && nav) {
-    menuToggle.addEventListener("click", function () {
-      nav.classList.toggle("active");
+    // Ouvrir / Fermer
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
       menuToggle.classList.toggle("active");
-      const isExpanded = menuToggle.classList.contains("active");
-      menuToggle.setAttribute("aria-expanded", isExpanded);
+      nav.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
+
+    // Fermer au clic sur un lien
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        nav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
-  // Fermer le menu en cliquant sur un lien
-  const navLinks = document.querySelectorAll(".nav__link");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (nav.classList.contains("active")) {
-        nav.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  });
-
-  // ANIMATIONS AU SCROLL
+  /* 2. ANIMATIONS AU SCROLL (INTERSECTION OBSERVER) */
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
+    root: null,
+    threshold: 0.1, // 10% de l'élément visible pour déclencher
+    rootMargin: "0px",
   };
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("fade-in-up");
-
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // On arrête d'observer une fois animé
       }
     });
   }, observerOptions);
 
-  // Observer les éléments à animer
+  // On observe les sections et les cartes
   const elementsToAnimate = document.querySelectorAll(
-    ".skill-card, .project-card, .service-card"
+    "section, .skill-card, .project-card, .service-card"
   );
-
-  elementsToAnimate.forEach((el) => {
-    observer.observe(el);
-  });
-
-  // Gestion du formulaire de contact
-  const contactForm = document.querySelector(".contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Alerte de confirmation
-      const formMessage = contactForm.querySelector(".form-message");
-
-      formMessage.textContent = "Envoi en cours...";
-      formMessage.className = "form-message";
-
-      setTimeout(() => {
-        formMessage.textContent =
-          "Merci pour votre message ! Je vous répondrai rapidement.";
-        formMessage.classList.add("success");
-        contactForm.reset();
-      }, 1000);
-    });
-  }
-
-  // Smooth scroll pour les ancres
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href");
-      if (targetId === "#") return;
-
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const headerHeight = document.querySelector(".header").offsetHeight;
-        const targetPosition = targetElement.offsetTop - headerHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-      }
-    });
-  });
+  elementsToAnimate.forEach((el) => observer.observe(el));
 });

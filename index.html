@@ -5,31 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio de Aurel Buranga,développeur web freelance spécialisé en front-end"
+      content="Portfolio de Aurel Buranga, développeur web freelance spécialisé en intégration de maquettes et sites responsives."
     />
-    <title>AurelCode - Developpeur Web Freelance | Portfolio</title>
+    <title>Aurel Buranga | Développeur Web Freelance</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Favicon (Optionnel) -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <!-- Pré-connexion pour accélérer le chargement -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Import de Lato -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <!-- En-tete avec navigation -->
+    <!-- En-tête -->
     <header class="header">
       <div class="container">
-        <a href="#home" class="logo" aria-label="Retour à l'accueil"
-          >Aurel<span>Code</span>
+        <a href="#home" class="logo" aria-label="Retour à l'accueil">
+          Aurel<span>Code</span>
         </a>
 
-        <!-- Navigation principale -->
         <nav class="nav" aria-label="Navigation principale">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#services" class="nav__link">Services</a>
             </li>
             <li class="nav__item">
-              <a href="#projects" class="nav__link">projets</a>
+              <a href="#projects" class="nav__link">Projets</a>
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link">A propos</a>
+              <a href="#about" class="nav__link">À propos</a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
@@ -37,14 +46,10 @@
           </ul>
         </nav>
 
-        <!-- Bouton contact desktop -->
         <div class="header__cta">
-          <a href="mailto:aurelburanga88@gmail.com" class="btn btn--primary"
-            >Contactez-moi
-          </a>
+          <a href="#contact" class="btn btn--primary">Me contacter</a>
         </div>
 
-        <!-- Menu burger mobile  -->
         <button
           class="menu-toggle"
           aria-label="Ouvrir le menu"
@@ -58,21 +63,23 @@
     </header>
 
     <main>
-      <!-- section hero -->
-      <section id="home" class="hero" aria-labelledby="hero-title">
+      <!-- HERO SECTION -->
+      <section id="home" class="hero">
         <div class="container">
           <div class="hero__content">
-            <h1 id="hero-title" class="hero__title">
+            <h1 class="hero__title">
               Bonjour, je suis <span class="accent">Aurel Buranga.</span>
             </h1>
 
             <div class="hero__presentation">
               <div class="hero__image">
+                <!-- fetchpriority="high" car c'est l'image principale -->
                 <img
                   src="./assets/imgs/myprofil.jpg"
-                  alt=" Photo de Aurel Buranga, développeur web freelance"
+                  alt="Portrait de Aurel Buranga"
                   width="300"
                   height="300"
+                  fetchpriority="high"
                 />
                 <p class="hero__caption">
                   Freelance en <span class="accent">développement web</span>
@@ -81,19 +88,14 @@
 
               <div class="hero__text">
                 <p>
-                  Moi c'est <strong>Aurel Buranga</strong>, je fais le
-                  <span class="accent">design</span> et le
-                  <span class="accent">développement </span>des sites web.
-                  Spécialisé dans le front-end, je crée des sites web modernes
-                  et attractifs qui s'adaptent parfaitement à tous les écrans
+                  Je transforme vos idées et maquettes en sites web
+                  <span class="accent">performants</span>,
+                  <span class="accent">accessibles</span> et
+                  <span class="accent">esthétiques</span>. Spécialisé en
+                  intégration Front-End.
                 </p>
-                <!-- Bouton contact mobile  -->
                 <div class="hero__cta-mobile">
-                  <a
-                    href="mailto:aurelburanga24@gmail.com"
-                    class="btn btn--primary"
-                    >Contactez-moi</a
-                  >
+                  <a href="#contact" class="btn btn--primary">Me contacter</a>
                 </div>
               </div>
             </div>
@@ -101,52 +103,42 @@
         </div>
       </section>
 
-      <!--  Section compétences  -->
-      <section class="skills" aria-labelledby="skills-title">
+      <!-- SKILLS SECTION -->
+      <section id="about" class="skills">
         <div class="container">
-          <h2 id="skills-title" class="section__title">Mes compétences</h2>
+          <h2 class="section__title">Mes Compétences</h2>
           <p class="section__subtitle">
-            Passionné par l'informatique , J'ai développé des compétences
-            solides sur les technologies web modernes.
+            Une stack technique moderne et robuste pour des projets durables.
           </p>
 
           <div class="skills__grid">
             <article class="skill-card">
               <div class="skill-card__icon">
                 <img
-                  src="/assets/imgs/html-icon.png"
-                  alt="Icône HTMl 5 "
-                  width="80"
-                  height="80"
+                  src="./assets/imgs/html-icon.png"
+                  alt="Logo HTML5"
+                  loading="lazy"
                 />
               </div>
-              <div class="skill-card__header">
-                <h3 class="skill-card__title">HTML5</h3>
-                <p class="skill-card__level">Niveau: <strong>Avancé</strong></p>
-              </div>
+              <h3 class="skill-card__title">HTML5 & Sémantique</h3>
               <p class="skill-card__description">
-                Le HTML est le langage fondamental du web. Je maîtrise la
-                sémantique HTML5 pour créer des structures robustes et
-                accessibles.
+                Structure optimisée pour le SEO et l'accessibilité (W3C
+                Standards).
               </p>
             </article>
 
             <article class="skill-card">
               <div class="skill-card__icon">
                 <img
-                  src="/assets/imgs/css-icon.png"
-                  alt="Icône CSS3"
-                  width="80"
-                  height="80"
+                  src="./assets/imgs/css-icon.png"
+                  alt="Logo CSS3"
+                  loading="lazy"
                 />
               </div>
-              <div class="skill-card__header">
-                <h3 class="skill-card__title">CSS3</h3>
-                <p class="skill-card__level">Niveau: <strong>Avancé</strong></p>
-              </div>
+              <h3 class="skill-card__title">CSS3 Moderne</h3>
               <p class="skill-card__description">
-                J' utilise CSS3 pour créer des interfaces modernes, responsive
-                et esthétiques avec Flexbox, Grid et les animations CSS.
+                Flexbox, Grid, Animations et Design Responsive pour tous les
+                écrans.
               </p>
             </article>
 
@@ -154,166 +146,166 @@
               <div class="skill-card__icon">
                 <img
                   src="./assets/imgs/javascript.png"
-                  alt="Icône JavaScript"
-                  width="80"
-                  height="80"
+                  alt="Logo JavaScript"
+                  loading="lazy"
                 />
               </div>
-              <div class="skill-card__header">
-                <h3 class="skill-card__title">JavaScript</h3>
-                <p class="skill-card__level">
-                  Niveau: <strong>Intermédiaire</strong>
-                </p>
-              </div>
+              <h3 class="skill-card__title">JavaScript ES6+</h3>
               <p class="skill-card__description">
-                JavaScript permet d'ajouter de l'interactivité et de créer des
-                expériences utilisateur dynamique et engageantes.
+                Interactivité dynamique et manipulation du DOM sans lourdeur.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Section projets  -->
-      <section id="projects" class="projects" aria-labelledby="projects-title">
+      <!-- PROJECTS SECTION (MASONRY) -->
+      <section id="projects" class="projects">
         <div class="container">
-          <h2 id="projects-title" class="section__title">Mes projets</h2>
+          <h2 class="section__title">Mes Réalisations</h2>
+          <p class="section__subtitle">
+            Des projets concrets orientés résultats.
+          </p>
 
           <div class="projects__grid">
+            <!-- PROJET 1 : SPENCERCAKES -->
             <article class="project-card">
               <div class="project-card__image">
                 <img
-                  src="./assets/imgs/projet/site e-commerce.png"
-                  alt="site e-commerce - grille de produits"
-                  width="400"
-                  height="250"
+                  src="./assets/imgs/projet/spencercakes-mockup-mobile.webp"
+                  alt="Site Vitrine Pâtisserie"
+                  loading="lazy"
                 />
               </div>
               <div class="project-card__content">
-                <h3 class="project-card__title">Site e-commerce</h3>
+                <h3 class="project-card__title">SpencerCakes</h3>
                 <p class="project-card__tech">
-                  <strong>Technologies :</strong> HTML5 & CSS3
+                  HTML5 • CSS3 • SEO Local • WebP
                 </p>
                 <p class="project-card__description">
-                  Grille de produits responsive pour un site e-commerce moderne.
+                  Site vitrine pour une pâtisserie artisanale. Conception
+                  complète : identité visuelle "Luxe", optimisation des images
+                  (WebP) et <strong>Score Lighthouse 94/100</strong>.
+                  Architecture multi-pages optimisée SEO.
                 </p>
-                <a href="#" class="btn btn--secondary">Voir le projet</a>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/Aurelcode19/spencer-cakes"
+                    target="_blank"
+                    class="btn btn--outline"
+                    style="margin-bottom: 10px"
+                    >Voir le code</a
+                  >
+
+                  <a
+                    href="https://aurelcode19.github.io/spencer-cakes/"
+                    target="_blank"
+                    class="btn btn--primary"
+                    >Voir le site</a
+                  >
+                </div>
               </div>
             </article>
 
+            <!-- PROJET 2 : MAGNETIC -->
             <article class="project-card">
               <div class="project-card__image">
                 <img
-                  src="./assets/imgs/projet/site vitrine .png"
-                  alt="Site Vitrine pour pâtisserie"
-                  width="400"
-                  height="250"
+                  src="./assets/imgs/projet/magnetic-mockup-mobile.webp"
+                  alt="E-commerce Tech"
+                  loading="lazy"
                 />
               </div>
               <div class="project-card__content">
-                <h3 class="project-card__title">Site Vitrine - Pâtisserie</h3>
-                <p class="project-card__tech">
-                  <strong>Technologies :</strong> HTML5 , CSS3, Figma
-                </p>
+                <h3 class="project-card__title">Magnetic E-shop</h3>
+                <p class="project-card__tech">JS Vanille • Performance • BEM</p>
                 <p class="project-card__description">
-                  Site vitrine élégant pour une pâtisserie avec design sur
-                  Figma.
+                  Interface E-commerce ultra-performante. Intégration
+                  pixel-perfect, gestion du panier, animations fluides au scroll
+                  et accessibilité (A11y) respectée.
+                  <strong>Score Performance : 99/100</strong>.
                 </p>
-                <a href="#" class="btn btn--secondary">Voir le projet</a>
-              </div>
-            </article>
-            <article class="project-card">
-              <div class="project-card__image">
-                <img
-                  src="./assets/imgs/projet/grille produits.png"
-                  alt="Grille de produits responsive"
-                  width="400"
-                  height="250"
-                />
-              </div>
-              <div class="project-card__content">
-                <h3 class="project-card__title">Grille de produits</h3>
-                <p class="project-card__tech">
-                  <strong>Technologies :</strong> HTML5 & CSS3
-                </p>
-                <p class="project-card__description">
-                  Grille de produits responsive avec système de filtres.
-                </p>
-                <a href="#" class="btn btn--secondary"> Voir le projet</a>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/aurelcode19/magnetic-ecommerce"
+                    target="_blank"
+                    class="btn btn--outline"
+                    style="margin-bottom: 10px"
+                    >Voir le code</a
+                  >
+                  <a
+                    href="https://aurelcode19.github.io/magnetic-ecommerce/"
+                    target="_blank"
+                    class="btn btn--primary"
+                    >Voir le site</a
+                  >
+                </div>
               </div>
             </article>
           </div>
-
           <div class="projects__more">
-            <button class="btn btn--outline">Voir plus de projets</button>
+            <a
+              href="https://github.com/Aurelcode19"
+              target="_blank"
+              class="btn btn--outline"
+              >Voir mon GitHub</a
+            >
           </div>
         </div>
       </section>
 
-      <!-- Section services  -->
-      <section id="services" class="services" aria-labelledby="services-title">
+      <!-- SERVICES SECTION -->
+      <section id="services" class="services">
         <div class="container">
-          <h2 id="services-title" class="section__title">Mes Services</h2>
-          <p class="section__subtitle">
-            Je proposes des solutions web sur mesure pour répondre à vos besoins
-            avec un code propre et maintenable.
-          </p>
+          <h2 class="section__title">Mes Services</h2>
           <div class="services__grid">
             <article class="service-card">
-              <h3 class="service-card__title">Intégration de maquettes</h3>
+              <h3 class="service-card__title">Intégration Web</h3>
               <p class="service-card__description">
-                Donnez vie à vos maquettes : je les transforme en sites web
-                responsives, accessibles et optimisés pour le SEO.
+                Je transforme vos designs (Figma, Adobe XD) en code propre,
+                sémantique et respectueux des standards.
               </p>
-              <a href="#contact" class="btn btn--primary"
-                >Discutons de votre projet</a
-              >
+              <a href="#contact" class="btn btn--primary">Devis gratuit</a>
             </article>
 
             <article class="service-card">
-              <h3 class="service-card__title">Sites vitrines</h3>
+              <h3 class="service-card__title">Site Responsive</h3>
               <p class="service-card__description">
-                Je conçois et développe votre site vitrine sur mesure pour
-                présenter vos services et renforcer votre crédibilité en ligne.
+                Votre site s'adaptera parfaitement aux mobiles, tablettes et
+                ordinateurs de bureau.
               </p>
-              <a href="#contact" class="btn btn--primary"
-                >Discutons de votre projet</a
-              >
+              <a href="#contact" class="btn btn--primary">Me consulter</a>
             </article>
 
             <article class="service-card">
-              <h3 class="service-card__title">Sites responsives</h3>
+              <h3 class="service-card__title">Refonte & Optimisation</h3>
               <p class="service-card__description">
-                J'optimise l'affichage de votre site pour qu'il soit parfait sur
-                tous les écrans : mobile, tablette et desktop.
+                J'améliore la vitesse et le référencement (SEO) de votre site
+                actuel pour attirer plus de clients.
               </p>
-              <a href="#contact" class="btn btn--primary"
-                >Discutons de votre projet</a
-              >
+              <a href="#contact" class="btn btn--primary">Auditer mon site</a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Section contact  -->
-      <section id="contact" class="contact" aria-labelledby="contact-title">
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="contact">
         <div class="container">
-          <h2 id="contact-title" class="section__title">Contact</h2>
-          <p class="section__subtitle">
-            Vous avez un projet ? Discutons-en ensemble pour le concrétiser.
-          </p>
+          <h2 class="section__title">Contactez-moi</h2>
+          <p class="section__subtitle">Discutons de votre prochain projet.</p>
 
           <div class="contact__methods">
-            <a href="mailto:aurelburanga88@gmail.com" class="contact__link">
-              <span class="contact__icon"
-                ><svg
+            <a href="mailto:aurelburanga24@gmail.com" class="contact__link">
+              <span class="contact__icon">
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
-                  aria-hidden="true"
                 >
                   <path
                     stroke-linecap="round"
@@ -322,66 +314,77 @@
                   />
                 </svg>
               </span>
-              aurelburanga88@gmail.com
+              aureburanga24@gmail.com
             </a>
-            <a href="#" class="contact__link">
-              <span class="contact__icon"> </span>
+
+            <a
+              href="https://www.linkedin.com/in/aurel-buranga-6b7663370"
+              target="_blank"
+              class="contact__link"
+            >
+              <span class="contact__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </span>
               LinkedIn
             </a>
           </div>
 
-          <form class="contact-form" aria-labelledby="contact-form-title">
-            <h3 id="contact-form-title" class="contact-form__title">
-              Envoyez-moi un message
-            </h3>
-
+          <form class="contact-form">
             <div class="form-group">
-              <label for="name" class="form-label">Votre nom</label>
+              <label for="name" class="form-label">Nom</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 class="form-input"
+                placeholder="Votre nom"
                 required
               />
             </div>
-
             <div class="form-group">
-              <label for="email" class="form-label">Votre email</label>
+              <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 class="form-input"
+                placeholder="exemple@gmail.com"
                 required
               />
             </div>
-
             <div class="form-group">
-              <label for="message" class="form-label">Votre message</label>
+              <label for="message" class="form-label">Message</label>
               <textarea
                 id="message"
                 name="message"
-                rows="6"
+                rows="5"
                 class="form-textarea"
+                placeholder="Décrivez votre projet..."
                 required
               ></textarea>
             </div>
-
-            <button type="submit" class="btn btn--primary btn-full">
-              Envoyer le message
+            <button type="submit" class="btn btn--primary btn--full">
+              Envoyer
             </button>
-            <p class="form-message" aria-live="polite"></p>
           </form>
         </div>
       </section>
     </main>
 
-    <!-- Pied de page  -->
     <footer class="footer">
       <div class="container">
-        <p>&copy;2024 AurelCode. Tous droits réservés.</p>
-        <p class="footer__credit">Développé par Aurel Buranga</p>
+        <p>&copy; 2025 AurelCode. Tous droits réservés.</p>
+        <p class="footer__credit">Design & Développement par Aurel Buranga</p>
       </div>
     </footer>
 
